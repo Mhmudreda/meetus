@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🛡️ Login Task - MeetusAR Auth Page
 
-## Getting Started
+This is a modern, responsive login interface built for a virtual shopping platform using  Next 16, Redux Toolkit, and TailwindCSS. It provides a smooth and engaging authentication experience with real-time form validation.
+-------------------------------------------------------
+🔗 Live Demo
+--------------
+You can check the deployed version of the task here:
 
-First, run the development server:
+👉 https://meetus-tau.vercel.app/
+-----------------------------------------------------
+🚀 Features
+-------------
+✅ Login with email & password
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+✅ Redux Toolkit for global state management
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✅ Real-time validation using yup + react-hook-form
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+✅ Authentication persistence via Cookies
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✅ Responsive UI across all devices
 
-## Learn More
+✅ Shadcn UI components with modern styling
 
-To learn more about Next.js, take a look at the following resources:
+✅ Redirect handling based on auth state
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🔐 Auth Flow
+--------------
+On login, credentials are submitted via fetch to backend API.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If successful:
 
-## Deploy on Vercel
+user, token, and isEmployee are stored in Cookies.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+User is redirected to the dashboard.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If logged out:
+
+Cookies is cleared.
+
+User is sent back to /login.
+
+Navigation logic is guarded based on user presence in Cookies.
+

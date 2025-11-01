@@ -1,6 +1,5 @@
 🛡️ Login Task - MeetusAR Auth Page
-
-This is a modern, responsive login interface built for a virtual shopping platform using  Next 16, Redux Toolkit, and TailwindCSS. It provides a smooth and engaging authentication experience with real-time form validation.
+This is a modern, responsive login interface built for a virtual shopping platform using Next 16, Redux Toolkit, and TailwindCSS. It provides a smooth and engaging authentication experience with real-time form validation and animated transitions.
 -------------------------------------------------------
 🔗 Live Demo
 You can check the deployed version of the task here:
